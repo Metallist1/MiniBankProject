@@ -6,5 +6,10 @@ namespace MiniBank.Entities
 {
     class Transaction
     {
+        public int Id { get; set; }
+        public DateTime GetDateTime { get; set; }
+        public string Type { get; set; }
+        public double Amount { get; set; }
+
     }
 }
