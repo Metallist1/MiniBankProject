@@ -4,6 +4,114 @@
     "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Infrastructure.SQLData\\MiniBank.Infrastructure.SQLData.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
+        "projectName": "MiniBank.Core",
+        "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
+        "packagesPath": "C:\\Users\\Revy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Revy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {
+                "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj",
+        "projectName": "MiniBank.Entities",
+        "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj",
+        "packagesPath": "C:\\Users\\Revy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Revy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Infrastructure.SQLData\\MiniBank.Infrastructure.SQLData.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -29,7 +137,14 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj": {
+                "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj"
+              },
+              "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {
+                "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

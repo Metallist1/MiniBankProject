@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniBank.Entities
 {
-    class Customer
+    public class Customer
     {
         public string Name { get; set; }
         public string Address { get; set; }
