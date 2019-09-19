@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nedas\\.nuget\\packages\\": {},
+    "C:\\Users\\Revy\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nedas\\source\\repos\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
       "projectName": "MiniBank.Core",
-      "projectPath": "C:\\Users\\nedas\\source\\repos\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
-      "packagesPath": "C:\\Users\\nedas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nedas\\source\\repos\\MiniBankProject\\MiniBank.Core\\obj\\",
+      "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj",
+      "packagesPath": "C:\\Users\\Revy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nedas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Revy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
