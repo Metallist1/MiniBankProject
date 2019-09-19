@@ -207,6 +207,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "MiniBank.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MiniBank.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniBank.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBank.Core.dll": {}
+        }
+      },
+      "MiniBank.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/MiniBank.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBank.Entities.dll": {}
+        }
       }
     }
   },
@@ -680,11 +703,23 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "MiniBank.Core/1.0.0": {
+      "type": "project",
+      "path": "../MiniBank.Core/MiniBank.Core.csproj",
+      "msbuildProject": "../MiniBank.Core/MiniBank.Core.csproj"
+    },
+    "MiniBank.Entities/1.0.0": {
+      "type": "project",
+      "path": "../MiniBank.Entities/MiniBank.Entities.csproj",
+      "msbuildProject": "../MiniBank.Entities/MiniBank.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "MiniBank.Core >= 1.0.0",
+      "MiniBank.Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -716,7 +751,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj": {
+              "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj"
+            },
+            "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {
+              "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

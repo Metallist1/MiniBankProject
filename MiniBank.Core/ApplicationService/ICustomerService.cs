@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniBank.Core.ApplicationService
 {
-    interface ICustomerService
+    public interface ICustomerService
     {
     }
 }

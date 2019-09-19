@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBankProject", "MiniBankProject\MiniBankProject.csproj", "{6496A77B-5628-412C-9345-0B7E91710B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBankProject", "MiniBankProject\MiniBankProject.csproj", "{6496A77B-5628-412C-9345-0B7E91710B8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{1F23C42A-3816-4C83-9CA3-94BD3C7D5677}"
 EndProject
@@ -11,11 +11,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{08BAA6EC-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{034AED49-18A6-4532-BEE9-EFB6355E6182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.Core", "MiniBank.Core\MiniBank.Core.csproj", "{E582BF69-5E1D-4408-ABB8-7CC1EB886079}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.Core", "MiniBank.Core\MiniBank.Core.csproj", "{E582BF69-5E1D-4408-ABB8-7CC1EB886079}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70235790-C740-4082-BB35-B1C1B3F2A3BE} = {70235790-C740-4082-BB35-B1C1B3F2A3BE}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.Entities", "MiniBank.Entities\MiniBank.Entities.csproj", "{70235790-C740-4082-BB35-B1C1B3F2A3BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.Entities", "MiniBank.Entities\MiniBank.Entities.csproj", "{70235790-C740-4082-BB35-B1C1B3F2A3BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBank.Infrastructure.SQLData", "MiniBank.Infrastructure.SQLData\MiniBank.Infrastructure.SQLData.csproj", "{0F40B6EF-957D-4F0F-8612-102364B9AEF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBank.Infrastructure.SQLData", "MiniBank.Infrastructure.SQLData\MiniBank.Infrastructure.SQLData.csproj", "{0F40B6EF-957D-4F0F-8612-102364B9AEF3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E582BF69-5E1D-4408-ABB8-7CC1EB886079} = {E582BF69-5E1D-4408-ABB8-7CC1EB886079}
+		{70235790-C740-4082-BB35-B1C1B3F2A3BE} = {70235790-C740-4082-BB35-B1C1B3F2A3BE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

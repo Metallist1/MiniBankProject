@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniBank.Core.DomainService
 {
-    interface IBankAccountRepository
+    public interface IBankAccountRepository
     {
     }
 }

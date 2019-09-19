@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MiniBank.Core.DomainService;
 
 namespace MiniBank.Infrastructure.SQLData
 {
-    class BankAccountRepository
+    public class BankAccountRepository : IBankAccountRepository
     {
     }
 }

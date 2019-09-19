@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniBank.Core.ApplicationService.AppliactionService.Impl
 {
-    class CustomerService
+   public class CustomerService : ICustomerService
     {
     }
 }

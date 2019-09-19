@@ -10,6 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MiniBank.Core.DomainService;
+using MiniBank.Infrastructure.SQLData;
+using MiniBank.Core.ApplicationService;
+using MiniBank.Core.ApplicationService.AppliactionService.Impl;
 
 namespace MiniBankProject
 {
@@ -25,6 +29,10 @@ namespace MiniBankProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IBankAccountRepository, BankAccountRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IBankAccountService, BankAccountService>();
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

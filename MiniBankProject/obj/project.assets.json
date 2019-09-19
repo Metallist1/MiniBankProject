@@ -4333,6 +4333,43 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "MiniBank.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MiniBank.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniBank.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBank.Core.dll": {}
+        }
+      },
+      "MiniBank.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/MiniBank.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBank.Entities.dll": {}
+        }
+      },
+      "MiniBank.Infrastructure.SQLData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MiniBank.Core": "1.0.0",
+          "MiniBank.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MiniBank.Infrastructure.SQLData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MiniBank.Infrastructure.SQLData.dll": {}
+        }
       }
     }
   },
@@ -11789,13 +11826,30 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "MiniBank.Core/1.0.0": {
+      "type": "project",
+      "path": "../MiniBank.Core/MiniBank.Core.csproj",
+      "msbuildProject": "../MiniBank.Core/MiniBank.Core.csproj"
+    },
+    "MiniBank.Entities/1.0.0": {
+      "type": "project",
+      "path": "../MiniBank.Entities/MiniBank.Entities.csproj",
+      "msbuildProject": "../MiniBank.Entities/MiniBank.Entities.csproj"
+    },
+    "MiniBank.Infrastructure.SQLData/1.0.0": {
+      "type": "project",
+      "path": "../MiniBank.Infrastructure.SQLData/MiniBank.Infrastructure.SQLData.csproj",
+      "msbuildProject": "../MiniBank.Infrastructure.SQLData/MiniBank.Infrastructure.SQLData.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "MiniBank.Core >= 1.0.0",
+      "MiniBank.Infrastructure.SQLData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11827,7 +11881,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj": {
+              "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Core\\MiniBank.Core.csproj"
+            },
+            "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Infrastructure.SQLData\\MiniBank.Infrastructure.SQLData.csproj": {
+              "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Infrastructure.SQLData\\MiniBank.Infrastructure.SQLData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

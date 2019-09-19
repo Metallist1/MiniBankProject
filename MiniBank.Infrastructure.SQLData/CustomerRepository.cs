@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MiniBank.Core.DomainService;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MiniBank.Infrastructure.SQLData
 {
-    class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
     }
 }
