@@ -24,8 +24,9 @@ namespace MiniBank.Infrastructure.SQLData
 
         public BankAccount Delete(int bcToDelete)
         {
-            var bankAcc = ReadByID(bcToDelete);
-            throw new NotImplementedException();
+            var custRemoved = _ctx.Remove(new BankAccount { id = bcToDelete }).Entity;
+            _ctx.SaveChanges();
+            return custRemoved;
         }
 
         public List<BankAccount> ReadAllBankAccounts()
@@ -40,7 +41,9 @@ namespace MiniBank.Infrastructure.SQLData
 
         public BankAccount Update(BankAccount bcToUpdate)
         {
-            throw new NotImplementedException();
+            var custUpdated = _ctx.Update<BankAccount>(bcToUpdate).Entity;
+            _ctx.SaveChanges();
+            return custUpdated;
         }
     }
 }

@@ -55,7 +55,7 @@ namespace MiniBankProject
 
                     var customer1 = ctx.Customers.Add(new Customer()
                     {
-                        id = 1,
+                        id = 95,
                         Name = "John",
                         Address = "Meme Street",
                         Number = 25,
@@ -64,7 +64,7 @@ namespace MiniBankProject
 
                     var customer2 = ctx.Customers.Add(new Customer()
                     {
-                        id = 2,
+                        id = 98,
                         Name = "Kent",
                         Address = "Kent Street",
                         Number = 95,
@@ -75,14 +75,14 @@ namespace MiniBankProject
 
                     var BankAcc1 = ctx.BankAccounts.Add(new BankAccount()
                     {
-                        id = 1,
+                        id = 93,
                         ActualBalance = 25,
                         InterestRate = 1.2
                     }).Entity;
 
                     var BankAcc2 = ctx.BankAccounts.Add(new BankAccount()
                     {
-                        id = 2,
+                        id = 103,
                         ActualBalance = 29,
                         InterestRate = 1.9
                     }).Entity;
