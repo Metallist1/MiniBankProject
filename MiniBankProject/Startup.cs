@@ -14,6 +14,7 @@ using MiniBank.Core.DomainService;
 using MiniBank.Infrastructure.SQLData;
 using MiniBank.Core.ApplicationService;
 using MiniBank.Core.ApplicationService.AppliactionService.Impl;
+using Microsoft.EntityFrameworkCore;
 
 namespace MiniBankProject
 {
@@ -29,6 +30,10 @@ namespace MiniBankProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MiniBankAppContext>(
+                opt => opt.UseInMemoryDatabase("ThatDB")
+                ) ;
+
             services.AddScoped<IBankAccountRepository, BankAccountRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IBankAccountService, BankAccountService>();

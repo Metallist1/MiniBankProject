@@ -6,6 +6,7 @@ namespace MiniBank.Entities
 {
     public class Customer
     {
+        public int id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public int Number { get; set; }

@@ -8,25 +8,30 @@ namespace MiniBank.Core.ApplicationService.AppliactionService.Impl
 {
     public class BankAccountService : IBankAccountService
     {
-        IBankAccountRepository repo;
+       private IBankAccountRepository _repo;
         public BankAccountService(IBankAccountRepository repo) {
-            this.repo = repo;
+            _repo = repo;
         }
-        public BankAccount newBankAccount(double intrestRate, double actualBalance)
+        private BankAccount newBankAccount(double intrestRate, double actualBalance)
         {
             Random rnd = new Random();
             int number = rnd.Next(int.MaxValue);
-            var account = new BankAccount { InterestRate = intrestRate, ActualBalance = actualBalance, AccountNumber = number };
+            var account = new BankAccount {
+                InterestRate = intrestRate,
+                ActualBalance = actualBalance,
+                AccountNumber = number
+            };
             return account;
         }
-        public int CreateAccount(BankAccount bA)
+        public BankAccount CreateAccount(double intrestRate, double actualBalance)
         {
-            throw new NotImplementedException();
+            var newBankAcc = newBankAccount(intrestRate, actualBalance);
+            return _repo.Create(newBankAcc);
         }
 
-        public bool DeleteAcc(int id)
+        public BankAccount DeleteAcc(int id)
         {
-            throw new NotImplementedException();
+            return _repo.Delete(id);
         }
 
         public void DepositMoney(BankAccount bA, double amount)
@@ -41,16 +46,17 @@ namespace MiniBank.Core.ApplicationService.AppliactionService.Impl
         }
         public BankAccount ReadAccByID(int id)
         {
-            throw new NotImplementedException();
+            return _repo.ReadByID(id);
         }
 
-        public bool UpdateAccount(BankAccount bA)
+        public BankAccount UpdateAccount(BankAccount bA)
         {
-            DeleteAcc(bA.AccountNumber);
-            CreateAccount(bA);
-            return true;
+            return _repo.Update(bA);
         }
 
-  
+        public List<BankAccount> readAllBankAccounts()
+        {
+            return _repo.ReadAllBankAccounts();
+        }
     }
 }

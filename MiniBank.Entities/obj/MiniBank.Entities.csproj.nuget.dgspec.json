@@ -1,34 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {}
+    "C:\\Users\\nedas\\Desktop\\MiniBank\\MiniBank.Entities\\MiniBank.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj": {
+    "C:\\Users\\nedas\\Desktop\\MiniBank\\MiniBank.Entities\\MiniBank.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\nedas\\Desktop\\MiniBank\\MiniBank.Entities\\MiniBank.Entities.csproj",
         "projectName": "MiniBank.Entities",
-        "projectPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\MiniBank.Entities.csproj",
-        "packagesPath": "C:\\Users\\Revy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Revy\\Source\\Repos\\Metallist1\\MiniBankProject\\MiniBank.Entities\\obj\\",
+        "projectPath": "C:\\Users\\nedas\\Desktop\\MiniBank\\MiniBank.Entities\\MiniBank.Entities.csproj",
+        "packagesPath": "C:\\Users\\nedas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nedas\\Desktop\\MiniBank\\MiniBank.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Revy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nedas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -39,12 +39,12 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp2.2": {
           "dependencies": {
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             }
           },

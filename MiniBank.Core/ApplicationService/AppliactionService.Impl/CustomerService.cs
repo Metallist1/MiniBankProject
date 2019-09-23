@@ -1,42 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MiniBank.Core.DomainService;
 using MiniBank.Entities;
 
 namespace MiniBank.Core.ApplicationService.AppliactionService.Impl
 {
     public class CustomerService : ICustomerService
     {
-
-        public int CreateCustomer(Customer cust)
+        private ICustomerRepository _customer;
+        public CustomerService(ICustomerRepository customer)
         {
-            throw new NotImplementedException();
+            _customer = customer;
         }
 
-        public bool DeleteCustomer(int id)
+        public Customer CreateCustomer(Customer cust)
         {
-            throw new NotImplementedException();
+            return _customer.Create(cust);
+        }
+
+        public Customer DeleteCustomer(int id)
+        {
+            return _customer.Delete(id);
         }
         public List<Customer> GetAllCustomers()
         {
-            throw new NotImplementedException();
-        }
-        public Customer newCustomer(string name, string address, int number, string email)
-        {
-            var cust = new Customer { Name = name, Address = address, Number = number, Email = email };
-            return cust;
+           return _customer.readAll();
         }
 
         public Customer ReadCustByID(int id)
         {
-            throw new NotImplementedException();
+            return _customer.readByID(id);
         }
 
-        public bool UpdateCustomer(Customer cust)
+        public Customer UpdateCustomer(Customer cust)
         {
-            DeleteCustomer(cust.Number);
-            CreateCustomer(cust);
-            return true;
+            return _customer.Update(cust);
         }
     }
 }

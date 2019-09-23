@@ -7,11 +7,11 @@ namespace MiniBank.Core.ApplicationService
 {
    public interface IBankAccountService
     {
-        BankAccount newBankAccount(double intrestRate, double actualBalance);
-        int CreateAccount(BankAccount bA);
+        List<BankAccount> readAllBankAccounts();
+        BankAccount CreateAccount(double intrestRate, double actualBalance);
         BankAccount ReadAccByID(int id);
-        bool UpdateAccount(BankAccount bA);
-        bool DeleteAcc(int id);
+        BankAccount UpdateAccount(BankAccount bA);
+        BankAccount DeleteAcc(int id);
         void WithdrawMoney(BankAccount bA, double amount);
         void DepositMoney(BankAccount bA, double amount);
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MiniBank.Core.ApplicationService;
+using MiniBank.Entities;
 
 namespace MiniBankProject.Controllers
 {
@@ -10,11 +12,16 @@ namespace MiniBankProject.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
+        ICustomerService _customerServ;
+        public CustomerController(ICustomerService customerService)
+        {
+            _customerServ = customerService;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<List<Customer>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _customerServ.GetAllCustomers();
         }
 
         // GET api/values/5

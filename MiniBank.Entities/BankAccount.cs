@@ -6,6 +6,7 @@ namespace MiniBank.Entities
 {
    public class BankAccount
     {
+        public int id { get; set; }
         public int AccountNumber { get; set; }
         public double InterestRate { get; set; }
         public double ActualBalance { get; set; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MiniBank.Core.ApplicationService;
+using MiniBank.Entities;
 
 namespace MiniBankProject.Controllers
 {
@@ -11,40 +12,44 @@ namespace MiniBankProject.Controllers
     [ApiController]
     public class BankAccountController : ControllerBase
     {
-        IBankAccountService service;
+
+        IBankAccountService _service;
         public BankAccountController(IBankAccountService bankAccountService) {
-            service = bankAccountService;
+            _service = bankAccountService;
         }
        
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<List<BankAccount>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _service.readAllBankAccounts();
         }
 
         
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<BankAccount> Get(int id)
         {
-            return "value";
+            return _service.ReadAccByID(id);
         }
 
         
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<BankAccount> Post([FromBody] BankAccount bankAccount)
         {
+            return _service.CreateAccount(bankAccount.InterestRate , bankAccount.ActualBalance);
         }
 
         
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<BankAccount> Put(int id, [FromBody] BankAccount bankAccount)
         {
+            return _service.UpdateAccount(bankAccount);
         }
 
         
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<BankAccount> Delete(int id)
         {
+           return _service.DeleteAcc(id);
         }
     }
 }
