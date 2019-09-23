@@ -15,6 +15,7 @@ using MiniBank.Infrastructure.SQLData;
 using MiniBank.Core.ApplicationService;
 using MiniBank.Core.ApplicationService.AppliactionService.Impl;
 using Microsoft.EntityFrameworkCore;
+using MiniBank.Entities;
 
 namespace MiniBankProject
 {
@@ -47,6 +48,47 @@ namespace MiniBankProject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var ctx = scope.ServiceProvider.GetService<MiniBankAppContext>();
+                    //Seed customers
+
+                    var customer1 = ctx.Customers.Add(new Customer()
+                    {
+                        id = 1,
+                        Name = "John",
+                        Address = "Meme Street",
+                        Number = 25,
+                        Email = "JohnSmith@hotmail.com"
+                    }).Entity;
+
+                    var customer2 = ctx.Customers.Add(new Customer()
+                    {
+                        id = 2,
+                        Name = "Kent",
+                        Address = "Kent Street",
+                        Number = 95,
+                        Email = "Kent@hotmail.com"
+                    }).Entity;
+
+                    //Seed BankAccounts
+
+                    var BankAcc1 = ctx.BankAccounts.Add(new BankAccount()
+                    {
+                        id = 1,
+                        ActualBalance = 25,
+                        InterestRate = 1.2
+                    }).Entity;
+
+                    var BankAcc2 = ctx.BankAccounts.Add(new BankAccount()
+                    {
+                        id = 2,
+                        ActualBalance = 29,
+                        InterestRate = 1.9
+                    }).Entity;
+
+                    ctx.SaveChanges();
+                }
             }
             else
             {

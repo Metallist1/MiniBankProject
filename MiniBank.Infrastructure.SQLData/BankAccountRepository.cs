@@ -35,7 +35,7 @@ namespace MiniBank.Infrastructure.SQLData
 
         public BankAccount ReadByID(int IdToFind)
         {
-            return _ctx.BankAccounts.FirstOrDefault(c => c.AccountNumber == IdToFind);
+            return _ctx.BankAccounts.FirstOrDefault(c => c.id == IdToFind);
         }
 
         public BankAccount Update(BankAccount bcToUpdate)
